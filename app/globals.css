@@ -7,3 +7,13 @@
   -webkit-text-stroke-width: 1.5px;
   -webkit-text-stroke-color: white;
 }
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+::-webkit-scrollbar-track {
+  background: #46365e;
+}
+::-webkit-scrollbar-thumb {
+  background: #c098fe;
+}

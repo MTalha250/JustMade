@@ -12,7 +12,7 @@ const Hero = () => {
   const [hasCountedRevenue, setHasCountedRevenue] = useState(false);
   return (
     <div className="relative px-8 md:px-16 min-h-screen bg-gradient-to-b from-primary to-white flex justify-center space-x-10 items-center">
-      <img src={img.src} alt="" className="w-1/2" />
+      <img src={img.src} alt="" draggable={false} className="w-1/2" />
       <div className="flex flex-col w-1/2 font-bold text-4xl tracking-wider">
         <h1 className="font-bask leading-[3.5rem] pr-3">
           SAVE TIME AND BUILD STRONG DIGITAL PPRESENCE
@@ -20,7 +20,7 @@ const Hero = () => {
         <h1 className="text-[#f59f0a] my-5">BE A BRAND OF FUTURE</h1>
         <Link
           href="/contact"
-          className="mx-auto p-5 text-base rounded-xl text-white bg-secondary shadow-md shadow-black/30"
+          className="mx-auto px-5 py-3 text-base rounded-xl text-white bg-secondary shadow-md shadow-black/30"
         >
           Get a demo
         </Link>
