@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { navLinks } from "@/constants";
-import ToggleButton from "@/components/Navbar/ToggleButton";
 import Link from "next/link";
 
 const variants = {
