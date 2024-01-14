@@ -1,32 +1,36 @@
 export const navLinks = [
   {
-    href: "/services",
+    href: "#services",
     label: "Services",
     children: [
       {
         href: "#",
-        label: "Service 1",
+        label: "Blog Writing",
       },
       {
         href: "#",
-        label: "Service 2",
+        label: "Blog Scheduling",
       },
       {
         href: "#",
-        label: "Service 3",
+        label: "Social Media Automation",
+      },
+      {
+        href: "#",
+        label: "Search Engine Optimization",
       },
     ],
   },
   {
-    href: "/contact",
+    href: "#contact",
     label: "Contact Us",
   },
   {
-    href: "/about",
+    href: "#about",
     label: "About Us",
   },
   {
-    href: "/pricing",
+    href: "#pricing",
     label: "Pricing",
   },
 ];

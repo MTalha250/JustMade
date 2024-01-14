@@ -6,6 +6,7 @@ import "swiper/css/effect-cards";
 import { EffectCards, Navigation } from "swiper/modules";
 import { PiArrowRightThin } from "react-icons/pi";
 import { PiArrowLeftThin } from "react-icons/pi";
+import { motion } from "framer-motion";
 const faqs = [
   {
     question: "What Does It Mean to Automate Content Creation for a Blog?",
@@ -40,67 +41,98 @@ const Faq = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <div className="md:px-32 px-16 my-10 py-10 overflow-hidden">
-      <h1 className="text-center text-5xl font-light text-secondary">
-        Frequently
-      </h1>
-      <h1 className="my-5 text-center text-6xl font-bask font-bold text-secondary">
-        Asked Questions
-      </h1>
-      <Swiper
-        effect={"cards"}
-        grabCursor={true}
-        speed={1000}
-        cardsEffect={{
-          perSlideRotate: 0,
-          perSlideOffset: 16,
+    <div className="md:px-32 px-16 py-10 overflow-hidden">
+      <motion.h1
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+          transition: { duration: 0.5 },
         }}
-        modules={[EffectCards, Navigation]}
-        className="mySwiper h-[50vh] w-[75%] my-10"
-        navigation={{
-          prevEl: ".prev",
-          nextEl: ".next",
-        }}
-        onActiveIndexChange={(e) => setActiveIndex(e.activeIndex)}
+        viewport={{ once: true }}
+        className="text-center text-5xl font-light text-secondary"
       >
-        {faqs.map((faq, index) => (
-          <SwiperSlide className="hover:bg-[#dbc5fc] transition duration-100 border-2 border-white relative w-full rounded-3xl text-xl text-white bg-[#ba9afd]">
-            <span className="font-extralight font-bask absolute text-4xl top-5 right-5">
-              0{index + 1}.
-            </span>
-            <div className="flex w-full h-full">
-              <div className=" bg-[#190d39] w-[28%] rounded-r-2xl overflow-hidden flex flex-col justify-end space-y-10">
-                <img src={faq.img} alt="" className="w-full h-full" />
+        Frequently
+      </motion.h1>
+      <motion.h1
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+          transition: { duration: 0.5 },
+        }}
+        viewport={{ once: true }}
+        className="my-5 text-center text-6xl font-bask font-bold text-secondary"
+      >
+        Asked Questions
+      </motion.h1>
+      <motion.div
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+          transition: { duration: 0.5 },
+        }}
+        viewport={{ once: true }}
+      >
+        <Swiper
+          effect={"cards"}
+          grabCursor={true}
+          speed={1000}
+          cardsEffect={{
+            perSlideRotate: 0,
+            perSlideOffset: 16,
+          }}
+          modules={[EffectCards, Navigation]}
+          className="mySwiper h-[50vh] w-[75%] my-10"
+          navigation={{
+            prevEl: ".prev",
+            nextEl: ".next",
+          }}
+          onActiveIndexChange={(e) => setActiveIndex(e.activeIndex)}
+        >
+          {faqs.map((faq, index) => (
+            <SwiperSlide
+              key={index}
+              className="hover:bg-[#dbc5fc] transition duration-100 border-2 border-white relative w-full rounded-3xl text-xl text-white bg-[#ba9afd]"
+            >
+              <span className="font-extralight font-bask absolute text-4xl top-5 right-5">
+                0{index + 1}.
+              </span>
+              <div className="flex w-full h-full">
+                <div className=" bg-[#190d39] w-[28%] rounded-r-2xl overflow-hidden flex flex-col justify-end space-y-10">
+                  <img src={faq.img} alt="" className="w-full h-full" />
+                </div>
+                <div className="w-[72%] text-secondary py-10 px-5 flex flex-col justify-between space-y-10">
+                  <p className="text-secondary font-bask font-extralight text-4xl pr-10">
+                    {faq.question}
+                  </p>
+
+                  <p className="text-sm">{faq.answer}</p>
+                </div>
               </div>
-              <div className="w-[72%] text-secondary py-10 px-5 flex flex-col justify-between space-y-10">
-                <p className="text-secondary font-bask font-extralight text-4xl pr-10">
-                  {faq.question}
-                </p>
+            </SwiperSlide>
+          ))}
 
-                <p className="text-sm">{faq.answer}</p>
-              </div>
-            </div>
-          </SwiperSlide>
-        ))}
+          <div className="flex justify-center space-x-3 text-4xl text-white my-5">
+            <button className="prev">
+              <PiArrowLeftThin
+                className={`p-1 bg-secondary rounded-full ${
+                  activeIndex == 0 ? "hidden" : ""
+                }`}
+              />
+            </button>
 
-        <div className="flex justify-center space-x-3 text-4xl text-white my-5">
-          <button className="prev">
-            <PiArrowLeftThin
-              className={`p-1 bg-secondary rounded-full ${
-                activeIndex == 0 ? "hidden" : ""
-              }`}
-            />
-          </button>
-
-          <button className="next">
-            <PiArrowRightThin
-              className={`p-1 bg-secondary rounded-full ${
-                activeIndex == faqs?.length - 1 ? "hidden" : ""
-              }`}
-            />
-          </button>
-        </div>
-      </Swiper>
+            <button className="next">
+              <PiArrowRightThin
+                className={`p-1 bg-secondary rounded-full ${
+                  activeIndex == faqs?.length - 1 ? "hidden" : ""
+                }`}
+              />
+            </button>
+          </div>
+        </Swiper>
+      </motion.div>
     </div>
   );
 };

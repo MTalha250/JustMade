@@ -1,14 +1,12 @@
 "use client";
-import React, { useEffect } from "react";
+import React from "react";
 import logo from "@/assets/logo.png";
 import { navLinks } from "@/constants";
 import { BiSolidChevronDown } from "react-icons/bi";
 import Link from "next/link";
 import { useState } from "react";
-
 const Navbar = () => {
   const [activeDropdown, setActiveDropdown] = useState(-1);
-
   return (
     <div className="bg-white text-black shadow-xl px-8 py-5 w-[95%] relative flex items-center justify-between rounded-2xl">
       <Link href="/" className="flex">
@@ -23,19 +21,22 @@ const Navbar = () => {
             onMouseLeave={() => setActiveDropdown(-1)}
             className="relative"
           >
-            <Link href={link.href} className="flex items-center">
+            <Link
+              href={link.href}
+              className="flex items-center hover:text-primary transition duration-300"
+            >
               {link.label}
               {link.children && (
                 <BiSolidChevronDown className="inline-block ml-1" />
               )}
             </Link>
             {link.children && activeDropdown === index && (
-              <div className="text-black absolute top-full left-[-10px] bg-white p-2 border-4 border-primary w-[250px] rounded shadow-lg">
+              <div className="text-black absolute top-full left-[-10px] bg-white p-2 border-2 border-primary  w-[250px] rounded shadow-lg">
                 {link.children.map((child, childIndex) => (
                   <Link
                     key={childIndex}
                     href={child.href}
-                    className={`block p-2 text-sm hover:bg-gray-200
+                    className={`block p-2 text-sm hover:bg-gray-200 hover:text-primary transition duration-300
                     ${childIndex === link.children.length - 1 ? "" : "border-b"}
                     `}
                   >

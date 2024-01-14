@@ -5,25 +5,87 @@ import Link from "next/link";
 import VisibilitySensor from "react-visibility-sensor";
 import { useState } from "react";
 import CountUp from "react-countup";
+import { motion } from "framer-motion";
 
+const text = "Save time and build strong digital presence";
+const text2 = "Be a brand of future";
 const Hero = () => {
   const [hasCountedReach, setHasCountedReach] = useState(false);
   const [hasCountedSocial, setHasCountedSocial] = useState(false);
   const [hasCountedRevenue, setHasCountedRevenue] = useState(false);
   return (
     <div className="relative px-8 md:px-16 min-h-screen bg-gradient-to-b from-primary to-white flex justify-center space-x-10 items-center">
-      <img src={img.src} alt="" draggable={false} className="w-1/2" />
-      <div className="flex flex-col w-1/2 font-bold text-4xl tracking-wider">
-        <h1 className="font-bask leading-[3.5rem] pr-3">
-          SAVE TIME AND BUILD STRONG DIGITAL PPRESENCE
+      <motion.img
+        initial={{ opacity: 0, x: -100 }}
+        whileInView={{
+          opacity: 1,
+          x: 0,
+          transition: { duration: 1 },
+        }}
+        viewport={{ once: true }}
+        src={img.src}
+        alt=""
+        draggable={false}
+        className="w-1/2"
+      />
+      <div className="flex flex-col w-1/2">
+        <h1 className="leading-[3.5rem] pr-3 font-bold font-bask uppercase text-4xl text-secondary">
+          {text.split(" ").map((letter, index) => (
+            <motion.span
+              key={index}
+              initial={{ opacity: 0, y: -10 * index }}
+              animate={{
+                opacity: 1,
+                y: 0,
+                transition: {
+                  duration: 0.3,
+                  delay: index * 0.1,
+                },
+              }}
+              className="mr-4 inline-block"
+            >
+              {letter}
+            </motion.span>
+          ))}
         </h1>
-        <h1 className="text-[#f59f0a] my-5">BE A BRAND OF FUTURE</h1>
-        <Link
-          href="/contact"
-          className="mx-auto px-5 py-3 text-base rounded-xl text-white bg-secondary shadow-md shadow-black/30"
+        <h1 className="text-[#f59f0a] font-bold text-4xl mt-5 font-bask">
+          {text2.split(" ").map((letter, index) => (
+            <motion.span
+              key={index}
+              initial={{ opacity: 0, y: -10 * index }}
+              animate={{
+                opacity: 1,
+                y: 0,
+                transition: {
+                  duration: 0.5,
+                  delay: index * 0.1,
+                },
+              }}
+              className="mr-4 inline-block"
+            >
+              {letter}
+            </motion.span>
+          ))}
+        </h1>
+        <motion.span
+          initial={{ opacity: 0, y: 100 }}
+          animate={{
+            opacity: 1,
+            y: 0,
+            transition: {
+              duration: 0.5,
+              delay: 0.5,
+            },
+          }}
+          className="text-center mt-10 text-base text-gray-500"
         >
-          Get a demo
-        </Link>
+          <Link
+            href="/contact"
+            className="mx-auto px-5 py-3 text-base rounded-xl text-white bg-secondary shadow-md shadow-black/30"
+          >
+            Get a demo
+          </Link>
+        </motion.span>
       </div>
       <div className="flex justify-around absolute bg-secondary w-full bottom-0 right-0 py-5 px-8 md:px-16 text-white">
         <VisibilitySensor

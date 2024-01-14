@@ -1,10 +1,20 @@
+"use client";
 import Link from "next/link";
 import React from "react";
-
+import { motion } from "framer-motion";
 const Business = () => {
   return (
-    <div className="my-20 px-16 md:px-32">
-      <div className="bg-primary flex flex-col items-center justify-between rounded-2xl p-10 space-y-3 text-secondary">
+    <div className="py-10 px-16 md:px-32">
+      <motion.div
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+          transition: { duration: 0.5 },
+        }}
+        viewport={{ once: true }}
+        className="bg-primary flex flex-col items-center justify-between rounded-2xl p-10 space-y-3 text-secondary"
+      >
         <h1 className="text-4xl font-extralight font-bask">Make Better</h1>
         <h1
           className="text-4xl font-bold bg-transparent"
@@ -26,7 +36,7 @@ const Business = () => {
         >
           Get a demo
         </Link>
-      </div>
+      </motion.div>
     </div>
   );
 };

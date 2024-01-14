@@ -1,52 +1,72 @@
 "use client";
-import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import React from "react";
 import { FaArrowRight } from "react-icons/fa";
-import VisibilitySensor from "react-visibility-sensor";
 import line from "@/assets/line.svg";
+import { motion } from "framer-motion";
 const Services = () => {
   return (
-    <div className="my-20 md:px-32 px-16">
+    <div id="services" className="py-20 md:px-32 px-16">
       <div className="flex items-center justify-around text-secondary">
-        <div>
+        <motion.div
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: { duration: 0.5 },
+          }}
+          viewport={{ once: true }}
+        >
           <h1 className="text-[45px] font-light">What can</h1>
-          <VisibilitySensor
-            partialVisibility
-            offset={{ top: 100, bottom: 100 }}
-            delayedCall
-            // active={!check} // This will make sure VisibilitySensor becomes inactive after first count
-          >
-            {({ isVisible }: { isVisible: any }) => (
-              <h1 className="text-5xl font-bold font-bask relative">
-                <svg
-                  viewBox="63.222 141.9655 565.2742 41.0005"
-                  xmlns="http://www.w3.org/2000/svg"
-                  className={`transition duration-1000 absolute -bottom-3 rotate-[0.5deg] w-3/4 origin-left left-0 -z-10 scale-x-${
-                    isVisible ? `100` : `0`
-                  }`}
-                >
-                  <path
-                    d="M 63.222 170.63 C 116.369 145.339 667.433 131.693 626.306 151.264 L 627.423 150.541 C 627.736 150.524 627.994 151.342 627.999 152.369 C 628.005 153.379 626.947 149.124 626.64 149.165 L 627.407 149.489 C 593.945 129.158 60.16 174.244 63.683 182.966 L 63.222 170.63 Z"
-                    fill="#FFA7EC"
-                    transform="matrix(0.9999999999999999, 0, 0, 0.9999999999999999, 0, -7.105427357601002e-15)"
-                  />
-                </svg>
-                <span> JustMade do for you?</span>
-              </h1>
-            )}
-          </VisibilitySensor>
-        </div>
-        <p className="w-2/5 text-justify tracking-wider">
+          <h1 className="text-5xl font-bold font-bask relative">
+            <motion.svg
+              initial={{ scale: 0 }}
+              whileInView={{
+                scale: 1,
+                transition: { duration: 1 },
+              }}
+              viewport={{ once: true }}
+              viewBox="63.222 141.9655 565.2742 41.0005"
+              xmlns="http://www.w3.org/2000/svg"
+              className="absolute -bottom-4 rotate-[0.5deg] w-3/4 origin-left left-0 -z-10"
+            >
+              <path
+                d="M 63.222 170.63 C 116.369 145.339 667.433 131.693 626.306 151.264 L 627.423 150.541 C 627.736 150.524 627.994 151.342 627.999 152.369 C 628.005 153.379 626.947 149.124 626.64 149.165 L 627.407 149.489 C 593.945 129.158 60.16 174.244 63.683 182.966 L 63.222 170.63 Z"
+                fill="#FFA7EC"
+                transform="matrix(0.9999999999999999, 0, 0, 0.9999999999999999, 0, -7.105427357601002e-15)"
+              />
+            </motion.svg>
+            <span> JustMade do for you?</span>
+          </h1>
+        </motion.div>
+        <motion.p
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: { duration: 0.5, delay: 0.2 },
+          }}
+          viewport={{ once: true }}
+          className="w-2/5 text-justify tracking-wider"
+        >
           Boost your blog's efficiency and visibility by automating content
           creation, SEO, and analytics. Intelligent tools will streamline
           workflows, enhance quality, and optimize performance, leading to
           increased traffic and growth with minimal manual effort.
-        </p>
+        </motion.p>
       </div>
-      <div className="relative my-20">
+      <div className="relative mt-20">
         <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-20 md:gap-x-8 md:gap-y-20">
-          <div className="bg-[#ffa7ec] hover:bg-primary hover:scale-105 transition duration-300 text-secondary p-8 space-y-5 rounded-xl">
+          <motion.div
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: { duration: 0.5 },
+            }}
+            viewport={{ once: true }}
+            className="bg-[#ffa7ec] hover:bg-primary  transition duration-300 text-secondary p-8 space-y-5 rounded-xl"
+          >
             <div className="flex items-center space-x-5">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -220,8 +240,17 @@ const Services = () => {
             >
               <span>Get Started</span> <FaArrowRight />
             </Link>
-          </div>
-          <div className="bg-[#ffa7ec] hover:bg-primary hover:scale-105 transition duration-300 text-secondary p-8 space-y-5 rounded-xl">
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: { duration: 0.5, delay: 0.2 },
+            }}
+            viewport={{ once: true }}
+            className="bg-[#ffa7ec] hover:bg-primary  transition duration-300 text-secondary p-8 space-y-5 rounded-xl"
+          >
             <div className="flex items-center space-x-5">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -434,8 +463,17 @@ const Services = () => {
             >
               <span>Get Started</span> <FaArrowRight />
             </Link>
-          </div>
-          <div className="bg-[#ffa7ec] hover:bg-primary hover:scale-105 transition duration-300 text-secondary p-8 space-y-5 rounded-xl">
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: { duration: 0.5 },
+            }}
+            viewport={{ once: true }}
+            className="bg-[#ffa7ec] hover:bg-primary  transition duration-300 text-secondary p-8 space-y-5 rounded-xl"
+          >
             <div className="flex items-center space-x-5">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -658,8 +696,17 @@ const Services = () => {
             >
               <span>Get Started</span> <FaArrowRight />
             </Link>
-          </div>
-          <div className="bg-[#ffa7ec] hover:bg-primary hover:scale-105 transition duration-300 text-secondary p-8 space-y-5 rounded-xl">
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: { duration: 0.5, delay: 0.2 },
+            }}
+            viewport={{ once: true }}
+            className="bg-[#ffa7ec] hover:bg-primary  transition duration-300 text-secondary p-8 space-y-5 rounded-xl"
+          >
             <div className="flex items-center space-x-5">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -847,12 +894,17 @@ const Services = () => {
             >
               <span>Get Started</span> <FaArrowRight />
             </Link>
-          </div>
-          <Image
-            layout="fill"
-            objectFit="contain"
+          </motion.div>
+          <motion.img
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: { duration: 0.5, delay: 1 },
+            }}
+            viewport={{ once: true }}
+            className="lg:block hidden absolute xl:top-[21%] left-0 w-full -z-10 object-contain"
             src={line.src}
-            className="lg:block hidden absolute xl:top-[21%] left-0 w-full px-20 -z-10"
             alt="useful info track"
           />
         </div>
