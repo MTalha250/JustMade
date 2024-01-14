@@ -7,6 +7,20 @@ import { EffectCards, Navigation } from "swiper/modules";
 import { PiArrowRightThin } from "react-icons/pi";
 import { PiArrowLeftThin } from "react-icons/pi";
 import { motion } from "framer-motion";
+const variants = {
+  initial: {
+    y: 100,
+    opacity: 0,
+  },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.5,
+      staggerChildren: 0.3,
+    },
+  },
+};
 const faqs = [
   {
     question: "What Does It Mean to Automate Content Creation for a Blog?",
@@ -41,40 +55,26 @@ const Faq = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <div className="md:px-32 px-16 py-10 overflow-hidden">
+    <motion.div
+      variants={variants}
+      initial="initial"
+      whileInView="animate"
+      viewport={{ once: true }}
+      className="md:px-32 px-16 py-10 overflow-hidden"
+    >
       <motion.h1
-        initial={{ opacity: 0, y: 100 }}
-        whileInView={{
-          opacity: 1,
-          y: 0,
-          transition: { duration: 0.5 },
-        }}
-        viewport={{ once: true }}
+        variants={variants}
         className="text-center text-5xl font-light text-secondary"
       >
         Frequently
       </motion.h1>
       <motion.h1
-        initial={{ opacity: 0, y: 100 }}
-        whileInView={{
-          opacity: 1,
-          y: 0,
-          transition: { duration: 0.5 },
-        }}
-        viewport={{ once: true }}
+        variants={variants}
         className="my-5 text-center text-6xl font-bask font-bold text-secondary"
       >
         Asked Questions
       </motion.h1>
-      <motion.div
-        initial={{ opacity: 0, y: 100 }}
-        whileInView={{
-          opacity: 1,
-          y: 0,
-          transition: { duration: 0.5 },
-        }}
-        viewport={{ once: true }}
-      >
+      <motion.div variants={variants}>
         <Swiper
           effect={"cards"}
           grabCursor={true}
@@ -133,7 +133,7 @@ const Faq = () => {
           </div>
         </Swiper>
       </motion.div>
-    </div>
+    </motion.div>
   );
 };
 

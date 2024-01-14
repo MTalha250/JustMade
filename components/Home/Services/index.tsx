@@ -4,19 +4,34 @@ import React from "react";
 import { FaArrowRight } from "react-icons/fa";
 import line from "@/assets/line.svg";
 import { motion } from "framer-motion";
+
+const variants = {
+  initial: {
+    y: 100,
+    opacity: 0,
+  },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.5,
+      staggerChildren: 0.3,
+    },
+  },
+};
+
 const Services = () => {
   return (
-    <div id="services" className="py-20 md:px-32 px-16">
+    <motion.div
+      variants={variants}
+      initial="initial"
+      whileInView="animate"
+      viewport={{ once: true }}
+      id="services"
+      className="py-20 md:px-32 px-16"
+    >
       <div className="flex items-center justify-around text-secondary">
-        <motion.div
-          initial={{ opacity: 0, y: 100 }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-            transition: { duration: 0.5 },
-          }}
-          viewport={{ once: true }}
-        >
+        <motion.div variants={variants}>
           <h1 className="text-[45px] font-light">What can</h1>
           <h1 className="text-5xl font-bold font-bask relative">
             <motion.svg
@@ -40,13 +55,7 @@ const Services = () => {
           </h1>
         </motion.div>
         <motion.p
-          initial={{ opacity: 0, y: 100 }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-            transition: { duration: 0.5, delay: 0.2 },
-          }}
-          viewport={{ once: true }}
+          variants={variants}
           className="w-2/5 text-justify tracking-wider"
         >
           Boost your blog's efficiency and visibility by automating content
@@ -58,13 +67,7 @@ const Services = () => {
       <div className="relative mt-20">
         <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-20 md:gap-x-8 md:gap-y-20">
           <motion.div
-            initial={{ opacity: 0, y: 100 }}
-            whileInView={{
-              opacity: 1,
-              y: 0,
-              transition: { duration: 0.5 },
-            }}
-            viewport={{ once: true }}
+            variants={variants}
             className="bg-[#ffa7ec] hover:bg-primary  transition duration-300 text-secondary p-8 space-y-5 rounded-xl"
           >
             <div className="flex items-center space-x-5">
@@ -242,13 +245,7 @@ const Services = () => {
             </Link>
           </motion.div>
           <motion.div
-            initial={{ opacity: 0, y: 100 }}
-            whileInView={{
-              opacity: 1,
-              y: 0,
-              transition: { duration: 0.5, delay: 0.2 },
-            }}
-            viewport={{ once: true }}
+            variants={variants}
             className="bg-[#ffa7ec] hover:bg-primary  transition duration-300 text-secondary p-8 space-y-5 rounded-xl"
           >
             <div className="flex items-center space-x-5">
@@ -465,12 +462,7 @@ const Services = () => {
             </Link>
           </motion.div>
           <motion.div
-            initial={{ opacity: 0, y: 100 }}
-            whileInView={{
-              opacity: 1,
-              y: 0,
-              transition: { duration: 0.5 },
-            }}
+            variants={variants}
             viewport={{ once: true }}
             className="bg-[#ffa7ec] hover:bg-primary  transition duration-300 text-secondary p-8 space-y-5 rounded-xl"
           >
@@ -698,13 +690,7 @@ const Services = () => {
             </Link>
           </motion.div>
           <motion.div
-            initial={{ opacity: 0, y: 100 }}
-            whileInView={{
-              opacity: 1,
-              y: 0,
-              transition: { duration: 0.5, delay: 0.2 },
-            }}
-            viewport={{ once: true }}
+            variants={variants}
             className="bg-[#ffa7ec] hover:bg-primary  transition duration-300 text-secondary p-8 space-y-5 rounded-xl"
           >
             <div className="flex items-center space-x-5">
@@ -896,20 +882,14 @@ const Services = () => {
             </Link>
           </motion.div>
           <motion.img
-            initial={{ opacity: 0, y: 100 }}
-            whileInView={{
-              opacity: 1,
-              y: 0,
-              transition: { duration: 0.5, delay: 1 },
-            }}
-            viewport={{ once: true }}
+            variants={variants}
             className="lg:block hidden absolute xl:top-[21%] left-0 w-full -z-10 object-contain"
             src={line.src}
             alt="useful info track"
           />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

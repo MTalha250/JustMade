@@ -4,21 +4,37 @@ import { Switch } from "@/components/ui/switch";
 import Link from "next/link";
 import { FaCheck } from "react-icons/fa";
 import { IoCloseSharp } from "react-icons/io5";
-import VisibilitySensor from "react-visibility-sensor";
 import { motion } from "framer-motion";
+
+const variants = {
+  initial: {
+    y: 100,
+    opacity: 0,
+  },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.5,
+      staggerChildren: 0.3,
+    },
+  },
+};
+
 const Plan = () => {
   const [yearly, setYearly] = React.useState(false);
 
   return (
-    <div id="pricing" className="md:px-32 px-16 py-20">
+    <motion.div
+      variants={variants}
+      initial="initial"
+      whileInView="animate"
+      viewport={{ once: true }}
+      id="pricing"
+      className="md:px-32 px-16 py-20"
+    >
       <motion.h1
-        initial={{ opacity: 0, y: 100 }}
-        whileInView={{
-          opacity: 1,
-          y: 0,
-          transition: { duration: 0.5 },
-        }}
-        viewport={{ once: true }}
+        variants={variants}
         className="relative font-bold flex flex-col items-center text-5xl text-secondary"
       >
         <span>
@@ -43,41 +59,25 @@ const Plan = () => {
         </span>
       </motion.h1>
       <motion.p
-        initial={{ opacity: 0, y: 100 }}
-        whileInView={{
-          opacity: 1,
-          y: 0,
-          transition: { duration: 0.5 },
-        }}
-        viewport={{ once: true }}
+        variants={variants}
         className="text-secondary text-center my-b mt-10 text-xl"
       >
         We offer a variety of pricing packages to meet the unique <br /> needs
         of our services.
       </motion.p>
       <motion.div
-        initial={{ opacity: 0, y: 100 }}
-        whileInView={{
-          opacity: 1,
-          y: 0,
-          transition: { duration: 0.5 },
-        }}
-        viewport={{ once: true }}
+        variants={variants}
         className="my-10 flex justify-center space-x-5 text-sm"
       >
-        <p>Pay Monthly</p>
-        <Switch checked={yearly} onCheckedChange={() => setYearly(!yearly)} />
-        <p>Pay Yearly</p>
+        <motion.p variants={variants}>Pay Monthly</motion.p>
+        <motion.span variants={variants}>
+          <Switch checked={yearly} onCheckedChange={() => setYearly(!yearly)} />
+        </motion.span>
+        <motion.p variants={variants}>Pay Yearly</motion.p>
       </motion.div>
       <div className="grid grid-cols-3 w-full gap-5 text-secondary">
         <motion.div
-          initial={{ opacity: 0, y: 100 }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-            transition: { duration: 0.5 },
-          }}
-          viewport={{ once: true }}
+          variants={variants}
           className="group transition duration-300 w-full border-2 rounded-xl p-10 space-y-6  hover:shadow-2xl hover:scale-y-105 shadow-secondary hover:border-secondary"
         >
           <h1 className="font-bold text-2xl">Freebie</h1>
@@ -114,13 +114,7 @@ const Plan = () => {
           </ul>
         </motion.div>
         <motion.div
-          initial={{ opacity: 0, y: 100 }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-            transition: { duration: 0.5, delay: 0.2 },
-          }}
-          viewport={{ once: true }}
+          variants={variants}
           className="relative group transition duration-300 w-full border-2 rounded-xl p-10 space-y-6  hover:shadow-2xl hover:scale-y-105 shadow-secondary hover:border-secondary"
         >
           <h1 className="font-bold text-2xl">Professional</h1>
@@ -161,13 +155,7 @@ const Plan = () => {
           </span>
         </motion.div>
         <motion.div
-          initial={{ opacity: 0, y: 100 }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-            transition: { duration: 0.5, delay: 0.4 },
-          }}
-          viewport={{ once: true }}
+          variants={variants}
           className="group transition duration-300 w-full border-2 rounded-xl p-10 space-y-6  hover:shadow-2xl hover:scale-y-105 shadow-secondary hover:border-secondary"
         >
           <h1 className="font-bold text-2xl">Enterprise</h1>
@@ -205,7 +193,7 @@ const Plan = () => {
           </ul>
         </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -9,6 +9,7 @@ import { motion } from "framer-motion";
 
 const text = "Save time and build strong digital presence";
 const text2 = "Be a brand of future";
+
 const Hero = () => {
   const [hasCountedReach, setHasCountedReach] = useState(false);
   const [hasCountedSocial, setHasCountedSocial] = useState(false);
