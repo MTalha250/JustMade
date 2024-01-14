@@ -29,10 +29,10 @@ const Contact = () => {
       whileInView="animate"
       viewport={{ once: true }}
     >
-      <motion.div
-        className="w-full md:w-1/2 flex flex-col space-y-5"
-        variants={variants}
-      >
+      <motion.div className="w-full md:w-1/2 flex flex-col" variants={variants}>
+        <motion.h1 variants={variants} className="text-[45px] font-light">
+          Feel Free
+        </motion.h1>
         <motion.h1
           variants={variants}
           className="text-5xl font-bold font-bask relative text-secondary"
@@ -54,13 +54,13 @@ const Contact = () => {
               transform="matrix(0.9999999999999999, 0, 0, 0.9999999999999999, 0, -7.105427357601002e-15)"
             />
           </motion.svg>
-          <span>Feel Free To Contact Us</span>
+          <span>To Get In Touch With Us</span>
         </motion.h1>
-        <motion.div className="pt-5" variants={variants}>
+        <motion.div className="pt-10" variants={variants}>
           <h2 className="font-bold  text-4xl font-bask">Mail</h2>
           <span className="text-xl font-light">info@justmade.io</span>
         </motion.div>
-        <motion.div className="py-3" variants={variants}>
+        <motion.div className="py-5" variants={variants}>
           <h2 className="font-bold text-4xl font-bask">Address</h2>
           <span className="text-xl font-light">Lahore - Pakistan</span>
         </motion.div>
@@ -132,7 +132,7 @@ const Contact = () => {
             name="message"
             className="w-full text-lg p-2 rounded-xl mb-3 border border-secondary placeholder:text-secondary text-secondary outline-none"
           />
-          <button className="px-5 py-3 text-base rounded-xl text-white bg-secondary shadow shadow-black/30">
+          <button className="transition duration-300 hover:bg-[#f2bd9d] hover:text-secondary font-bold px-5 py-3 text-base rounded-xl text-white bg-secondary shadow shadow-black/30">
             Submit
           </button>
         </motion.form>

@@ -75,7 +75,7 @@ const Services = () => {
                 xmlns="http://www.w3.org/2000/svg"
                 data-name="Layer 1"
                 viewBox="0 0 766.06693 517"
-                className="w-32"
+                className="w-32 "
               >
                 <path
                   d="M978.03346,618.5h-379a5.00573,5.00573,0,0,1-5-5v-417a5.00573,5.00573,0,0,1,5-5h379a5.00573,5.00573,0,0,1,5,5v417A5.00573,5.00573,0,0,1,978.03346,618.5Zm-379-425a3.00328,3.00328,0,0,0-3,3v417a3.00328,3.00328,0,0,0,3,3h379a3.00328,3.00328,0,0,0,3-3v-417a3.00328,3.00328,0,0,0-3-3Z"
@@ -232,16 +232,18 @@ const Services = () => {
               <h1 className="font-bold text-3xl font-bask">BLOG WRITING</h1>
             </div>
             <p className="text-justify text-sm">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
-              maiores exercitationem architecto maxime porro, corporis quibusdam
-              dolores dolorem dicta dignissimos nostrum, temporibus, repudiandae
-              debitis ea. Accusantium laborum voluptatem laboriosam iusto!
+              Dive into the world of impactful storytelling with our blog
+              writing services. Our team of expert writers is adept at creating
+              engaging, informative, and SEO-friendly content that resonates
+              with your audience. From industry-specific articles to general
+              interest blogs, we ensure your voice is heard.
             </p>
             <Link
               href=""
-              className="items-center space-x-3 font-bold text-xl flex"
+              className="group w-fit hover:bg-[#f2bd9d] py-1 px-5 rounded-full transition duration-300 items-center space-x-3 font-bold text-xl flex"
             >
-              <span>Get Started</span> <FaArrowRight />
+              <span>Get Started</span>{" "}
+              <FaArrowRight className="text-2xl group-hover:animate-bounce-x" />
             </Link>
           </motion.div>
           <motion.div
@@ -449,16 +451,18 @@ const Services = () => {
               <h1 className="font-bold text-3xl font-bask">BLOG SCHEDULING</h1>
             </div>
             <p className="text-justify text-sm">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
-              maiores exercitationem architecto maxime porro, corporis quibusdam
-              dolores dolorem dicta dignissimos nostrum, temporibus, repudiandae
-              debitis ea. Accusantium laborum voluptatem laboriosam iusto!
+              Stay ahead in the game with our seamless blog scheduling
+              solutions. We understand the importance of consistency in content
+              creation. Our strategic scheduling ensures your blog stays fresh,
+              relevant, and continually engaging, keeping your audience hooked
+              and coming back for more.
             </p>
             <Link
               href=""
-              className="items-center space-x-3 font-bold text-xl flex"
+              className="group w-fit hover:bg-[#f2bd9d] py-1 px-5 rounded-full transition duration-300 items-center space-x-3 font-bold text-xl flex"
             >
-              <span>Get Started</span> <FaArrowRight />
+              <span>Get Started</span>{" "}
+              <FaArrowRight className="text-2xl group-hover:animate-bounce-x" />
             </Link>
           </motion.div>
           <motion.div
@@ -677,16 +681,18 @@ const Services = () => {
               </h1>
             </div>
             <p className="text-justify text-sm">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
-              maiores exercitationem architecto maxime porro, corporis quibusdam
-              dolores dolorem dicta dignissimos nostrum, temporibus, repudiandae
-              debitis ea. Accusantium laborum voluptatem laboriosam iusto!
+              Embrace the future with our social media automation services. We
+              streamline your social media management, ensuring consistent and
+              timely posting across all platforms. Our tools and expertise in
+              automation let you connect with your audience efficiently,
+              enhancing engagement and brand presence.
             </p>
             <Link
               href=""
-              className="items-center space-x-3 font-bold text-xl flex"
+              className="group w-fit hover:bg-[#f2bd9d] py-1 px-5 rounded-full transition duration-300 items-center space-x-3 font-bold text-xl flex"
             >
-              <span>Get Started</span> <FaArrowRight />
+              <span>Get Started</span>{" "}
+              <FaArrowRight className="text-2xl group-hover:animate-bounce-x" />
             </Link>
           </motion.div>
           <motion.div
@@ -869,16 +875,18 @@ const Services = () => {
               </h1>
             </div>
             <p className="text-justify text-sm">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
-              maiores exercitationem architecto maxime porro, corporis quibusdam
-              dolores dolorem dicta dignissimos nostrum, temporibus, repudiandae
-              debitis ea. Accusantium laborum voluptatem laboriosam iusto!
+              Elevate your online visibility with our specialized SEO services.
+              We employ the latest techniques and tools to enhance your
+              website’s ranking on search engines. By optimizing your content
+              and structure, we drive more organic traffic to your site,
+              increasing leads and conversions.
             </p>
             <Link
               href=""
-              className="items-center space-x-3 font-bold text-xl flex"
+              className="group w-fit hover:bg-[#f2bd9d] py-1 px-5 rounded-full transition duration-300 items-center space-x-3 font-bold text-xl flex"
             >
-              <span>Get Started</span> <FaArrowRight />
+              <span>Get Started</span>{" "}
+              <FaArrowRight className="text-2xl group-hover:animate-bounce-x" />
             </Link>
           </motion.div>
           <motion.img

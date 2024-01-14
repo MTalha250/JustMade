@@ -99,7 +99,7 @@ const Hero = () => {
         >
           <Link
             href="/contact"
-            className="mx-auto px-5 py-3 text-base rounded-xl text-white bg-secondary shadow-md shadow-black/30"
+            className="transition duration-300 hover:bg-[#f2bd9d] hover:text-secondary font-bold mx-auto px-5 py-3 text-base rounded-xl text-white bg-secondary shadow-md shadow-black/30"
           >
             Get a demo
           </Link>

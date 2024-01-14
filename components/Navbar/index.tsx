@@ -53,7 +53,7 @@ const Navbar = () => {
         <Link href="/trial">Free Trail</Link>
         <Link
           href="/demo"
-          className="py-3 px-5 rounded-full text-black bg-primary shadow-md shadow-black/30"
+          className="transition duration-300 hover:bg-secondary hover:text-white py-3 px-5 rounded-full text-black bg-primary shadow-md shadow-black/30"
         >
           Get a demo
         </Link>

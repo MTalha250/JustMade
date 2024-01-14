@@ -46,7 +46,7 @@ const Business = () => {
         </p>
         <Link
           href="/contact"
-          className="px-5 py-3 text-base rounded-xl text-white bg-secondary shadow shadow-black/30"
+          className="transition duration-300 hover:bg-[#f2bd9d] hover:text-secondary font-bold px-5 py-3 text-base rounded-xl text-white bg-secondary shadow shadow-black/30"
         >
           Get a demo
         </Link>
