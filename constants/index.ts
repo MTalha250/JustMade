@@ -1,5 +1,9 @@
 export const navLinks = [
   {
+    href: "#about",
+    label: "About Us",
+  },
+  {
     href: "#services",
     label: "Services",
     children: [
@@ -22,15 +26,11 @@ export const navLinks = [
     ],
   },
   {
-    href: "#contact",
-    label: "Contact Us",
-  },
-  {
-    href: "#about",
-    label: "About Us",
-  },
-  {
     href: "#pricing",
     label: "Pricing",
+  },
+  {
+    href: "#contact",
+    label: "Contact Us",
   },
 ];
