@@ -67,17 +67,17 @@ const Faq = () => {
       initial="initial"
       whileInView="animate"
       viewport={{ once: true }}
-      className="md:px-32 px-16 py-10 overflow-hidden"
+      className="lg:px-32 md:px-16 px-8 py-10 overflow-hidden"
     >
       <motion.h1
         variants={variants}
-        className="text-center text-5xl font-light text-secondary"
+        className="text-center text-4xl md:text-5xl font-light text-secondary"
       >
         Frequently
       </motion.h1>
       <motion.h1
         variants={variants}
-        className="my-5 text-center text-6xl font-bask font-bold text-secondary"
+        className="my-5 text-center text-5xl md:text-6xl font-bask font-bold text-secondary"
       >
         <span
           className="bg-transparent"
@@ -102,7 +102,7 @@ const Faq = () => {
             perSlideOffset: 17,
           }}
           modules={[EffectCards, Navigation]}
-          className="mySwiper h-[45vh] w-[70%] my-10"
+          className="mySwiper h-[80vh] md:h-[45vh] w-full md:w-[70%] my-10"
           navigation={{
             prevEl: ".prev",
             nextEl: ".next",
@@ -117,16 +117,14 @@ const Faq = () => {
                 index == activeIndex ? "bg-[#ba9afd]" : "bg-[#8060c3]"
               }`}
             >
-              <div className="hover:bg-[#dbc5fc] transition duration-300 flex w-full h-full relative">
-                <span className="font-bask absolute text-4xl top-5 right-5">
-                  0{index + 1}.
-                </span>
-                <div className=" bg-[#190d39] w-[28%] rounded-r-2xl overflow-hidden flex flex-col justify-end space-y-10">
+              <div className="hover:bg-[#dbc5fc] transition duration-300 flex flex-col md:flex-row w-full h-full">
+                <div className=" bg-[#190d39] w-full md:w-[28%] h-[25vh] md:h-auto rounded-r-2xl overflow-hidden flex flex-col justify-end space-y-10">
                   <img src={faq?.img} alt="" className="w-full h-full" />
                 </div>
-                <div className="w-[72%] text-secondary py-10 px-5 flex flex-col justify-between space-y-10">
-                  <p className="text-secondary font-bask text-4xl pr-10">
-                    {faq?.question}
+                <div className="w-full md:w-[72%] text-secondary p-5 flex flex-col justify-between space-y-10">
+                  <p className="text-secondary font-bask text-3xl md:text-4xl flex flex-col-reverse md:flex-row justify-between gap-5">
+                    <span>{faq?.question}</span>
+                    <span className="text-white text-4xl">0{index + 1}.</span>
                   </p>
 
                   <p className="text-sm">{faq?.answer}</p>

@@ -28,12 +28,12 @@ const Services = () => {
       whileInView="animate"
       viewport={{ once: true }}
       id="services"
-      className="py-20 md:px-32 px-16"
+      className="py-20 lg:px-32 sm:px-16 px-8"
     >
-      <div className="flex items-center justify-around text-secondary">
+      <div className="flex gap-10 flex-col md:flex-row items-center justify-around text-secondary">
         <motion.div variants={variants}>
-          <h1 className="text-[45px] font-light">What can</h1>
-          <h1 className="text-5xl font-bold font-bask relative">
+          <h1 className="text-4xl md:text-[45px] font-light">What can</h1>
+          <h1 className="text-4xl md:text-5xl font-bold font-bask relative">
             <motion.svg
               initial={{ scale: 0 }}
               whileInView={{
@@ -56,7 +56,7 @@ const Services = () => {
         </motion.div>
         <motion.p
           variants={variants}
-          className="w-2/5 text-justify tracking-wider"
+          className="w-full md:w-2/5 text-justify tracking-wider"
         >
           Boost your blog's efficiency and visibility by automating content
           creation, SEO, and analytics. Intelligent tools will streamline
@@ -65,17 +65,17 @@ const Services = () => {
         </motion.p>
       </div>
       <div className="relative mt-20">
-        <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-20 md:gap-x-8 md:gap-y-20">
+        <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-10">
           <motion.div
             variants={variants}
             className="bg-[#ffa7ec] hover:bg-primary  transition duration-300 text-secondary p-8 space-y-5 rounded-xl"
           >
-            <div className="flex items-center space-x-5">
+            <div className="flex flex-col sm:flex-row items-center gap-5">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 data-name="Layer 1"
                 viewBox="0 0 766.06693 517"
-                className="w-32 "
+                className="w-1/2 sm:w-1/4 md:w-1/5"
               >
                 <path
                   d="M978.03346,618.5h-379a5.00573,5.00573,0,0,1-5-5v-417a5.00573,5.00573,0,0,1,5-5h379a5.00573,5.00573,0,0,1,5,5v417A5.00573,5.00573,0,0,1,978.03346,618.5Zm-379-425a3.00328,3.00328,0,0,0-3,3v417a3.00328,3.00328,0,0,0,3,3h379a3.00328,3.00328,0,0,0,3-3v-417a3.00328,3.00328,0,0,0-3-3Z"
@@ -229,7 +229,9 @@ const Services = () => {
                 />
               </svg>
 
-              <h1 className="font-bold text-3xl font-bask">BLOG WRITING</h1>
+              <h1 className="font-bold text-2xl md:text-3xl font-bask">
+                BLOG WRITING
+              </h1>
             </div>
             <p className="text-justify text-sm">
               Dive into the world of impactful storytelling with our blog
@@ -250,12 +252,12 @@ const Services = () => {
             variants={variants}
             className="bg-[#ffa7ec] hover:bg-primary  transition duration-300 text-secondary p-8 space-y-5 rounded-xl"
           >
-            <div className="flex items-center space-x-5">
+            <div className="flex flex-col sm:flex-row items-center gap-5">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 data-name="Layer 1"
                 viewBox="0 0 675.67004 631.94692"
-                className="w-24"
+                className="w-1/2 sm:w-1/4 md:w-1/5"
               >
                 <path
                   d="M886.75657,617.4844l30.31095,4.737a98.98541,98.98541,0,0,0,20.60431-42.93875c-22.16391,18.14266-55.86923,8.5016-82.74464,18.40656A59.5399,59.5399,0,0,0,819.307,635.03277L804.49369,650.9701A99.77016,99.77016,0,0,0,887.905,646.378a96.3717,96.3717,0,0,0,19.64-14.09929C896.93923,625.60042,886.75657,617.4844,886.75657,617.4844Z"
@@ -448,7 +450,9 @@ const Services = () => {
                 />
               </svg>
 
-              <h1 className="font-bold text-3xl font-bask">BLOG SCHEDULING</h1>
+              <h1 className="font-bold text-2xl md:text-3xl font-bask">
+                BLOG SCHEDULING
+              </h1>
             </div>
             <p className="text-justify text-sm">
               Stay ahead in the game with our seamless blog scheduling
@@ -470,12 +474,12 @@ const Services = () => {
             viewport={{ once: true }}
             className="bg-[#ffa7ec] hover:bg-primary  transition duration-300 text-secondary p-8 space-y-5 rounded-xl"
           >
-            <div className="flex items-center space-x-5">
+            <div className="flex flex-col sm:flex-row items-center gap-5">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 data-name="Layer 1"
                 viewBox="0 0 1061 507.3972"
-                className="w-44"
+                className="w-2/3 sm:w-1/2 md:w-1/3"
               >
                 <path
                   id="f8c762bc-b7e7-4c8e-b73e-f411c620c2bd-1410"
@@ -676,7 +680,7 @@ const Services = () => {
                 </g>
               </svg>
 
-              <h1 className="font-bold text-3xl font-bask">
+              <h1 className="font-bold text-2xl md:text-3xl font-bask">
                 SOCIAL MEDIA AUTOMATION
               </h1>
             </div>
@@ -699,12 +703,12 @@ const Services = () => {
             variants={variants}
             className="bg-[#ffa7ec] hover:bg-primary  transition duration-300 text-secondary p-8 space-y-5 rounded-xl"
           >
-            <div className="flex items-center space-x-5">
+            <div className="flex flex-col sm:flex-row items-center gap-5">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 data-name="Layer 1"
                 viewBox="0 0 709.53268 558.59384"
-                className="w-32"
+                className="w-1/2 sm:w-1/4 md:w-1/5"
               >
                 <rect
                   x="0.27492"
@@ -870,7 +874,7 @@ const Services = () => {
                   fill="#46365e"
                 />
               </svg>
-              <h1 className="font-bold text-3xl font-bask">
+              <h1 className="font-bold text-2xl md:text-3xl font-bask">
                 SEARCH ENGINE OPTIMISATION
               </h1>
             </div>

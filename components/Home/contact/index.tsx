@@ -23,19 +23,22 @@ const Contact = () => {
     <motion.div
       id="contact"
       ref={ref}
-      className="py-20 flex items-center md:items-start flex-col md:flex-row w-full px-16 md:px-32 text-secondary"
+      className="py-20 flex items-center md:items-start flex-col md:flex-row w-full px-8 md:px-16 lg:px-32 text-secondary"
       variants={variants}
       initial="initial"
       whileInView="animate"
       viewport={{ once: true }}
     >
       <motion.div className="w-full md:w-1/2 flex flex-col" variants={variants}>
-        <motion.h1 variants={variants} className="text-[45px] font-light">
+        <motion.h1
+          variants={variants}
+          className="text-3xl md:text-[45px] font-light"
+        >
           Feel Free
         </motion.h1>
         <motion.h1
           variants={variants}
-          className="text-5xl font-bold font-bask relative text-secondary"
+          className="mt-2 text-4xl md:text-5xl font-bold font-bask relative text-secondary"
         >
           <motion.svg
             initial={{ scale: 0 }}
@@ -46,7 +49,7 @@ const Contact = () => {
             viewport={{ once: true }}
             viewBox="63.222 141.9655 565.2742 41.0005"
             xmlns="http://www.w3.org/2000/svg"
-            className="absolute -bottom-6 rotate-[0.5deg] origin-left w-3/4 left-0 -z-10"
+            className="absolute -bottom-6 rotate-[0.5deg] origin-left md:w-3/4 left-0 -z-10"
           >
             <path
               d="M 63.222 170.63 C 116.369 145.339 667.433 131.693 626.306 151.264 L 627.423 150.541 C 627.736 150.524 627.994 151.342 627.999 152.369 C 628.005 153.379 626.947 149.124 626.64 149.165 L 627.407 149.489 C 593.945 129.158 60.16 174.244 63.683 182.966 L 63.222 170.63 Z"
