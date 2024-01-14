@@ -9,6 +9,20 @@ import { motion } from "framer-motion";
 
 const text = "Save time and build strong digital presence";
 const text2 = "Be a brand of future";
+const variants = {
+  initial: {
+    y: 100,
+    opacity: 0,
+  },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.5,
+      staggerChildren: 0.3,
+    },
+  },
+};
 
 const Hero = () => {
   const [hasCountedReach, setHasCountedReach] = useState(false);
@@ -35,7 +49,7 @@ const Hero = () => {
             <motion.span
               key={index}
               initial={{ opacity: 0, y: -10 * index }}
-              animate={{
+              whileInView={{
                 opacity: 1,
                 y: 0,
                 transition: {
@@ -54,7 +68,7 @@ const Hero = () => {
             <motion.span
               key={index}
               initial={{ opacity: 0, y: -10 * index }}
-              animate={{
+              whileInView={{
                 opacity: 1,
                 y: 0,
                 transition: {
@@ -70,7 +84,7 @@ const Hero = () => {
         </h1>
         <motion.span
           initial={{ opacity: 0, y: 100 }}
-          animate={{
+          whileInView={{
             opacity: 1,
             y: 0,
             transition: {
@@ -88,7 +102,13 @@ const Hero = () => {
           </Link>
         </motion.span>
       </div>
-      <div className="flex justify-around absolute bg-secondary w-full bottom-0 right-0 py-5 px-8 md:px-16 text-white">
+      <motion.div
+        variants={variants}
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true }}
+        className="flex justify-around absolute bg-secondary w-full bottom-0 right-0 py-5 px-8 md:px-16 text-white"
+      >
         <VisibilitySensor
           partialVisibility
           offset={{ top: 10 }}
@@ -99,12 +119,12 @@ const Hero = () => {
           active={!hasCountedReach} // This will make sure VisibilitySensor becomes inactive after first count
         >
           {({ isVisible }: { isVisible: any }) => (
-            <div>
+            <motion.div variants={variants}>
               <h1 className="text-5xl font-extrabold text-center stroke text-transparent">
                 +<CountUp end={isVisible ? 636 : 0} duration={3} />%
               </h1>
               <p className="text-xs mt-2">Increase in Reach, Year Over Year</p>
-            </div>
+            </motion.div>
           )}
         </VisibilitySensor>
         <VisibilitySensor
@@ -117,12 +137,12 @@ const Hero = () => {
           active={!hasCountedSocial} // This will make sure VisibilitySensor becomes inactive after first count
         >
           {({ isVisible }: { isVisible: any }) => (
-            <div>
+            <motion.div variants={variants}>
               <h1 className="text-5xl font-extrabold text-center stroke text-transparent">
                 +<CountUp end={isVisible ? 500 : 0} duration={3} />%
               </h1>
               <p className="text-xs mt-2">Growth Accross All Social Channels</p>
-            </div>
+            </motion.div>
           )}
         </VisibilitySensor>
         <VisibilitySensor
@@ -135,17 +155,17 @@ const Hero = () => {
           active={!hasCountedRevenue} // This will make sure VisibilitySensor becomes inactive after first count
         >
           {({ isVisible }: { isVisible: any }) => (
-            <div>
+            <motion.div variants={variants}>
               <h1 className="text-5xl font-extrabold text-center stroke text-transparent">
                 +<CountUp end={isVisible ? 250 : 0} duration={3} />%
               </h1>
               <p className="text-xs mt-2">
                 Increase in Sourced Revenue, Year Over Year
               </p>
-            </div>
+            </motion.div>
           )}
         </VisibilitySensor>
-      </div>
+      </motion.div>
     </div>
   );
 };
