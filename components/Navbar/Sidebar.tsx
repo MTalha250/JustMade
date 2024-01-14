@@ -42,7 +42,7 @@ const Sidebar = () => {
             </li>
           ))}
         </ul>
-        <Link href="/login" className="fixed bottom-5 right-5">
+        <Link href="/login" className="fixed bottom-5 right-5 z-50">
           Login
         </Link>
       </motion.div>
