@@ -7,43 +7,62 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaPinterest } from "react-icons/fa";
 const Footer = () => {
   return (
-    <div className="bg-secondary pt-10 px-8 md:px-16 text-white rounded-t-3xl">
-      <div className="flex justify-between">
-        <Link href="/" className="flex">
-          <img src={logo.src} alt="" className="w-44 h-fit" />
+    <div className="bg-secondary pt-10 px-8 md:px-16 lg:px-32 text-white rounded-t-3xl">
+      <div className="w-full flex justify-between flex-wrap gap-10">
+        <Link href="/" className="w-[260px]">
+          <img src={logo.src} alt="" className="w-full" />
         </Link>
-        <ul className="space-y-2">
-          <li>Blog Writer</li>
-          <li>Blog Schedule</li>
-          <li>Social Media Automation</li>
-          <li>Search Engine Optimisation</li>
-        </ul>
-        <ul className="space-y-2">
-          <li>Blog</li>
-          <li>Guides and Tutorials</li>
-          <li>API</li>
-          <li>Free Templates</li>
-          <li>Status</li>
-        </ul>
-        <ul className="space-y-2">
-          <li>Servies</li>
-          <li>About Us</li>
-          <li>Contact Us</li>
-          <li>Pricing</li>
-          <li>Affiliate Program</li>
-        </ul>
+        <div className="w-[260px]">
+          <h1 className="text-xl">
+            Our{" "}
+            <span className="font-bold text-2xl font-bask italic">
+              Services
+            </span>
+          </h1>
+          <ul className="space-y-2 mt-5">
+            <li>Blog Writing</li>
+            <li>Blog Scheduling</li>
+            <li>Social Media Automation</li>
+            <li>Search Engine Optimisation</li>
+          </ul>
+        </div>
+        <div className="w-[260px]">
+          <h1 className="text-xl">
+            <span className="font-bold text-2xl font-bask italic">Explore</span>
+          </h1>
+          <ul className="space-y-2 mt-5">
+            <li>Blog</li>
+            <li>Guides and Tutorials</li>
+            <li>API</li>
+            <li>Free Templates</li>
+            <li>Status</li>
+          </ul>
+        </div>
+        <div className="w-[260px]">
+          <h1 className="text-xl">
+            Quick
+            <span className="font-bold text-2xl font-bask italic"> Links</span>
+          </h1>
+          <ul className="space-y-2 mt-5">
+            <li>Servies</li>
+            <li>About Us</li>
+            <li>Contact Us</li>
+            <li>Pricing</li>
+            <li>Affiliate Program</li>
+          </ul>
+        </div>
       </div>
-      <div className="mt-20 flex justify-end space-x-3">
+      <div className="mt-10 flex justify-end space-x-3">
         <FaTwitter className="text-2xl" />
         <FaFacebook className="text-2xl" />
         <FaLinkedin className="text-2xl" />
         <FaPinterest className="text-2xl" />
       </div>
-      <div className="text-sm flex justify-end space-x-10 px-44 py-3 border-b">
+      <div className="text-sm flex justify-end space-x-5 md:space-x-10 py-5 border-b">
         <span>Terms</span>
         <span>Privacy Policy</span>
       </div>
-      <p className="text-center text-sm py-5">
+      <p className="text-center text-xs py-5">
         © Copyright 2023 JustMade, All Rights are Reserved.
       </p>
     </div>

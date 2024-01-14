@@ -5,12 +5,21 @@ import { navLinks } from "@/constants";
 import { BiSolidChevronDown } from "react-icons/bi";
 import Link from "next/link";
 import { useState } from "react";
+import { motion } from "framer-motion";
+import Sidebar from "@/components/Navbar/Sidebar";
 const Navbar = () => {
   const [activeDropdown, setActiveDropdown] = useState(-1);
   return (
     <div className="bg-white text-black shadow-xl px-8 py-5 w-[95%] relative flex items-center justify-between rounded-2xl">
       <Link href="/" className="flex">
-        <img src={logo.src} alt="" className="w-8" />
+        <motion.img
+          initial={{ rotate: 180 }}
+          whileInView={{ rotate: 0, transition: { duration: 0.5, delay: 1 } }}
+          viewport={{ once: true }}
+          src={logo.src}
+          alt=""
+          className="w-8"
+        />
         <span className="font-bold font-bask text-2xl">ustMade</span>
       </Link>
       <div className="text-sm items-center justify-center space-x-10 md:flex hidden">
@@ -48,7 +57,7 @@ const Navbar = () => {
           </div>
         ))}
       </div>
-      <div className="font-semibold text-sm space-x-10">
+      <div className="hidden md:block font-semibold text-sm space-x-10">
         <Link href="/login">Login</Link>
         <Link href="/trial">Free Trail</Link>
         <Link
@@ -58,6 +67,7 @@ const Navbar = () => {
           Get a demo
         </Link>
       </div>
+      <Sidebar />
     </div>
   );
 };

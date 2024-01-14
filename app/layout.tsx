@@ -47,10 +47,10 @@ export default function RootLayout({
           viewport={{ once: true }}
           className="w-[100vw] max-w-[1600px] transition-top duration-300 flex items-center justify-center top-5 fixed z-50"
         >
-          {/* <Navbar /> */}
+          <Navbar />
         </motion.div>
         <div>{children}</div>
-        {/* <Footer /> */}
+        <Footer />
         {scrolled && (
           <motion.button
             initial={{ opacity: 0, y: 100 }}
