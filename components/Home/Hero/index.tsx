@@ -57,6 +57,7 @@ const Hero = () => {
                   delay: index * 0.1,
                 },
               }}
+              viewport={{ once: true }}
               className="mr-4 inline-block"
             >
               {letter}
@@ -76,6 +77,7 @@ const Hero = () => {
                   delay: index * 0.1,
                 },
               }}
+              viewport={{ once: true }}
               className="mr-4 inline-block"
             >
               {letter}
@@ -92,6 +94,7 @@ const Hero = () => {
               delay: 0.5,
             },
           }}
+          viewport={{ once: true }}
           className="text-center mt-10 text-base text-gray-500"
         >
           <Link

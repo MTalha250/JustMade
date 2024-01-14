@@ -41,9 +41,10 @@ export default function RootLayout({
             opacity: 1,
             y: 0,
             transition: {
-              duration: 0.1,
+              duration: 0.5,
             },
           }}
+          viewport={{ once: true }}
           className="w-[100vw] max-w-[1600px] transition-top duration-300 flex items-center justify-center top-5 fixed z-50"
         >
           <Navbar />
