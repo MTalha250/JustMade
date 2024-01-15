@@ -101,12 +101,12 @@ const Services = () => {
               variants={variants}
               className="bg-[#ffa7ec] hover:bg-primary  transition duration-300 text-secondary p-5 space-y-5 rounded-xl"
             >
-              <div className="flex flex-col sm:flex-row items-center gap-5">
+              <div className="flex flex-col sm:flex-row items-center md:gap-3 gap-5">
                 <img
                   src={s.img}
-                  className="w-32 h-32 md:w-28 md:h-28 object-contain"
+                  className="w-32 h-32 md:w-24 md:h-24 lg:w-28 lg:h-28 object-contain"
                 />
-                <h1 className="font-bold text-2xl md:text-3xl font-bask">
+                <h1 className="font-bold text-2xl lg:text-3xl font-bask">
                   {s.title}
                 </h1>
               </div>
@@ -122,7 +122,7 @@ const Services = () => {
           ))}
           <motion.img
             variants={variants}
-            className="lg:block hidden absolute xl:top-[20%] left-0 w-full -z-10 top-0"
+            className="md:block hidden absolute h-full left-0 w-full -z-10 top-0"
             src={line.src}
             alt="useful info track"
           />

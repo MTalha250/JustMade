@@ -7,12 +7,12 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaPinterest } from "react-icons/fa";
 const Footer = () => {
   return (
-    <div className="bg-secondary pt-10 px-8 md:px-16 lg:px-32 text-white rounded-t-3xl">
-      <div className="w-full flex justify-between flex-wrap gap-10">
-        <Link href="/" className="w-[260px]">
+    <div className="bg-secondary pt-10 px-8 md:px-16 text-white rounded-t-3xl">
+      <div className="w-full flex justify-around flex-wrap gap-10">
+        <Link href="/" className="w-[250px]">
           <img src={logo.src} alt="" className="w-full" />
         </Link>
-        <div className="w-[260px]">
+        <div className="w-[250px]">
           <h1 className="text-xl">
             Our{" "}
             <span className="font-bold text-2xl font-bask italic">
@@ -26,7 +26,7 @@ const Footer = () => {
             <li>Search Engine Optimisation</li>
           </ul>
         </div>
-        <div className="w-[260px]">
+        <div className="w-[250px]">
           <h1 className="text-xl">
             <span className="font-bold text-2xl font-bask italic">Explore</span>
           </h1>
@@ -38,7 +38,7 @@ const Footer = () => {
             <li>Status</li>
           </ul>
         </div>
-        <div className="w-[260px]">
+        <div className="w-[250px]">
           <h1 className="text-xl">
             Quick
             <span className="font-bold text-2xl font-bask italic"> Links</span>
