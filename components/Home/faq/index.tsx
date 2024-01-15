@@ -122,7 +122,7 @@ const Faq = () => {
                   <img src={faq?.img} alt="" className="w-full h-full" />
                 </div>
                 <div className="w-full md:w-[72%] text-secondary p-5 flex flex-col justify-between space-y-10">
-                  <p className="text-secondary font-bask text-3xl md:text-4xl flex flex-col-reverse md:flex-row justify-between gap-5">
+                  <p className="text-secondary font-bask text-3xl lg:text-4xl flex flex-col-reverse md:flex-row justify-between gap-5">
                     <span>{faq?.question}</span>
                     <span className="text-white text-4xl">0{index + 1}.</span>
                   </p>

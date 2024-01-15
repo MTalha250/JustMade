@@ -62,7 +62,7 @@ export default function RootLayout({
                 delay: 0.5,
               },
             }}
-            className="md:inline-block fixed bottom-5 right-5 z-50 bg-secondary text-2xl border border-white text-white p-3 rounded-xl shadow-md shadow-black/30"
+            className="md:inline-block fixed bottom-5 right-5 z-40 bg-secondary text-2xl border border-white text-white p-3 rounded-xl shadow-md shadow-black/30"
             onClick={() => window.scrollTo(0, 0)}
           >
             <FaArrowUp />

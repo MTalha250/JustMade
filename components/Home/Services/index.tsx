@@ -61,7 +61,7 @@ const Services = () => {
       className="py-20 lg:px-32 sm:px-16 px-8"
     >
       <div className="flex gap-10 flex-col md:flex-row items-center justify-around text-secondary">
-        <motion.div variants={variants}>
+        <motion.div className="w-full lg:w-auto" variants={variants}>
           <h1 className="text-4xl md:text-[45px] font-light">What can</h1>
           <h1 className="text-4xl md:text-5xl font-bold font-bask relative">
             <motion.svg
@@ -86,7 +86,7 @@ const Services = () => {
         </motion.div>
         <motion.p
           variants={variants}
-          className="w-full md:w-2/5 text-justify tracking-wider"
+          className="w-full lg:w-2/5 text-justify tracking-wider"
         >
           Boost your blog's efficiency and visibility by automating content
           creation, SEO, and analytics. Intelligent tools will streamline
@@ -99,7 +99,7 @@ const Services = () => {
           {services.map((s) => (
             <motion.div
               variants={variants}
-              className="bg-[#ffa7ec] hover:bg-primary  transition duration-300 text-secondary p-5 space-y-5 rounded-xl"
+              className="bg-[#ffa7ec] hover:bg-primary  transition duration-300 text-secondary p-5 space-y-5 rounded-xl overflow-hidden"
             >
               <div className="flex flex-col sm:flex-row items-center md:gap-3 gap-5">
                 <img

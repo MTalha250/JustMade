@@ -30,8 +30,8 @@ const Hero = () => {
   const [hasCountedRevenue, setHasCountedRevenue] = useState(false);
   return (
     <div className="min-h-screen bg-gradient-to-b from-primary to-white flex flex-col justify-between">
-      <div className="pt-28 md:pt-0"></div>
-      <div className="px-8 sm:px-16 md:px-32  flex flex-col md:flex-row justify-center gap-10 items-center">
+      <div className="pt-28"></div>
+      <div className="px-8 md:px-16 lg:px-32  flex flex-col md:flex-row justify-center gap-10 items-center">
         <motion.img
           initial={{ opacity: 0, x: -100 }}
           whileInView={{
@@ -46,7 +46,7 @@ const Hero = () => {
           className="w-full md:w-1/2"
         />
         <div className="flex flex-col w-full md:w-1/2">
-          <h1 className="md:leading-[3.5rem] font-bold font-bask uppercase text-3xl md:text-4xl text-secondary">
+          <h1 className="lg:leading-[3.5rem] font-bold font-bask uppercase text-3xl lg:text-4xl text-secondary">
             {text.split(" ").map((letter, index) => (
               <motion.span
                 key={index}
@@ -66,7 +66,7 @@ const Hero = () => {
               </motion.span>
             ))}
           </h1>
-          <h1 className="text-[#f59f0a] font-bold text-3xl md:text-4xl mt-5 font-bask">
+          <h1 className="text-[#f59f0a] font-bold text-3xl lg:text-4xl mt-5 font-bask">
             {text2.split(" ").map((letter, index) => (
               <motion.span
                 key={index}

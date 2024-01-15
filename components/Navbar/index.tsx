@@ -22,7 +22,7 @@ const Navbar = () => {
         />
         <span className="font-bold font-bask text-2xl">ustMade</span>
       </Link>
-      <div className="text-sm items-center justify-center space-x-10 md:flex hidden">
+      <div className="text-sm items-center justify-center space-x-5 lg:space-x-10 md:flex hidden">
         {navLinks.map((link, index) => (
           <div
             key={index}
@@ -57,9 +57,11 @@ const Navbar = () => {
           </div>
         ))}
       </div>
-      <div className="hidden md:block font-semibold text-sm space-x-10">
+      <div className="hidden md:block font-semibold text-sm space-x-5">
         <Link href="/login">Login</Link>
-        <Link href="/trial">Free Trail</Link>
+        <Link className="hidden lg:inline" href="/trial">
+          Free Trail
+        </Link>
         <Link
           href="/demo"
           className="transition duration-300 hover:bg-secondary hover:text-white py-3 px-5 rounded-full text-black bg-primary shadow-md shadow-black/30"
