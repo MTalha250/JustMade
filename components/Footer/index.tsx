@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo2.png";
 import { FaTwitter } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";

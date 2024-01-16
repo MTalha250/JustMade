@@ -8,7 +8,6 @@ import { FaArrowUp } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Toaster } from "react-hot-toast";
-
 const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({
@@ -33,6 +32,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <title>JustMade</title>
+        <link rel="icon" href="/logo.png" />
       </head>
       <body className={inter.className}>
         <Cursor />

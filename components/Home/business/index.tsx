@@ -45,10 +45,13 @@ const Business = () => {
         >
           <span>Business Decisions</span>
         </motion.h1>
-        <motion.p variants={variants} className="md:w-1/2 py-10 text-center">
-          Explore our success stories and learn how we've successfully helped
-          different businesses. Or get in touch with us to schedule an
-          introductory call.
+        <motion.p variants={variants} className="md:w-1/2 py-5 text-center">
+          Discover the inspiring success stories of various businesses that have
+          benefited from our services. Delve into detailed case studies
+          showcasing our effective strategies and the positive outcomes
+          achieved. Alternatively, connect with us directly to arrange an
+          initial conversation where we can discuss your specific needs and
+          explore how we can assist you in achieving your business goals.
         </motion.p>
         <motion.span variants={variants}>
           <Link
