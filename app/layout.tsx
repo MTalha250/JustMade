@@ -7,6 +7,7 @@ import Cursor from "@/components/cursor";
 import { FaArrowUp } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { Toaster } from "react-hot-toast";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -68,6 +69,7 @@ export default function RootLayout({
             <FaArrowUp />
           </motion.button>
         )}
+        <Toaster />
       </body>
     </html>
   );

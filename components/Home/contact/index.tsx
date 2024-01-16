@@ -1,7 +1,9 @@
 "use client";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
-
+import toast from "react-hot-toast";
+import axios from "axios";
+import ReactLoading from "react-loading";
 const variants = {
   initial: {
     y: 100,
@@ -19,6 +21,41 @@ const variants = {
 const Contact = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { margin: "-100px" });
+  const [data, setData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+  const [loading, setLoading] = useState(false);
+  const handleChange = (e: any) => {
+    const { name, value } = e.target;
+    setData((prev) => {
+      return {
+        ...prev,
+        [name]: value,
+      };
+    });
+  };
+  const handleSubmit = async (e: any) => {
+    setLoading(true);
+    e.preventDefault();
+    if (!data.name || !data.email || !data.phone || !data.message) {
+      toast.error("Please fill all fields");
+      setLoading(false);
+      return;
+    }
+    const response = await axios.post(`/api/contact`, data);
+    toast.success(response.data.message);
+    setData({
+      name: "",
+      email: "",
+      phone: "",
+      message: "",
+    });
+    setLoading(false);
+  };
+
   return (
     <motion.div
       id="contact"
@@ -107,36 +144,45 @@ const Contact = () => {
           whileInView={{ opacity: 1 }}
           transition={{ delay: 1, duration: 1 }}
           className="w-full"
+          onSubmit={handleSubmit}
         >
           <input
             className="w-full text-lg p-2 rounded-xl mb-3 border border-secondary placeholder:text-secondary text-secondary outline-none"
             type="text"
-            required
             placeholder="Name"
             name="name"
+            value={data.name}
+            onChange={handleChange}
           />
           <input
             className="w-full text-lg p-2 rounded-xl mb-3 border border-secondary placeholder:text-secondary text-secondary outline-none"
             type="email"
-            required
             placeholder="Email"
             name="email"
+            value={data.email}
+            onChange={handleChange}
           />
           <input
             className="w-full text-lg p-2 rounded-xl mb-3 border border-secondary placeholder:text-secondary text-secondary outline-none"
-            type="number"
-            required
+            type="tel"
             placeholder="Phone"
-            name="number"
+            name="phone"
+            value={data.phone}
+            onChange={handleChange}
           />
           <textarea
             rows={6}
             placeholder="Message"
             name="message"
+            value={data.message}
+            onChange={handleChange}
             className="w-full text-lg p-2 rounded-xl mb-3 border border-secondary placeholder:text-secondary text-secondary outline-none"
           />
-          <button className="transition duration-300 hover:bg-[#f2bd9d] hover:text-secondary font-bold px-5 py-3 text-base rounded-xl text-white bg-secondary shadow shadow-black/30">
-            Submit
+          <button
+            type="submit"
+            className="transition duration-300 hover:bg-[#f2bd9d] hover:text-secondary font-bold px-5 py-3 text-base rounded-xl text-white bg-secondary shadow shadow-black/30"
+          >
+            {loading ? <ReactLoading type="bars" /> : "Submit"}
           </button>
         </motion.form>
       </div>
