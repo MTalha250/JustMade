@@ -43,7 +43,7 @@ const Hero = () => {
           src={img.src}
           alt=""
           draggable={false}
-          className="w-full md:w-1/2"
+          className="w-full md:w-1/2 p-10"
         />
         <div className="flex flex-col w-full md:w-1/2">
           <h1 className="lg:leading-[3.5rem] font-bold font-bask uppercase text-3xl lg:text-4xl text-secondary">
