@@ -30,7 +30,7 @@ const Hero = () => {
   const [hasCountedRevenue, setHasCountedRevenue] = useState(false);
   return (
     <div className="min-h-screen bg-gradient-to-b from-primary to-white flex flex-col justify-between">
-      <div className="pt-28"></div>
+      <div className="pt-32"></div>
       <div className="px-8 md:px-16 lg:px-32  flex flex-col md:flex-row justify-center gap-10 items-center">
         <motion.img
           initial={{ opacity: 0, x: -100 }}
