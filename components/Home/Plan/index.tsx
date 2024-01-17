@@ -35,7 +35,7 @@ const Plan = () => {
     >
       <motion.h1
         variants={variants}
-        className="relative font-bold flex flex-col items-center text-4xl md:text-5xl text-secondary"
+        className="font-bold flex flex-col items-center text-4xl md:text-5xl text-secondary"
       >
         <span>
           Find Your Right Plan
@@ -48,7 +48,7 @@ const Plan = () => {
             viewport={{ once: true }}
             viewBox="63.222 141.9655 565.2742 41.0005"
             xmlns="http://www.w3.org/2000/svg"
-            className="absolute -bottom-5 rotate-[0.5deg] md:w-1/3 origin-left -z-10"
+            className="rotate-[0.5deg] origin-left -z-10"
           >
             <path
               d="M 63.222 170.63 C 116.369 145.339 667.433 131.693 626.306 151.264 L 627.423 150.541 C 627.736 150.524 627.994 151.342 627.999 152.369 C 628.005 153.379 626.947 149.124 626.64 149.165 L 627.407 149.489 C 593.945 129.158 60.16 174.244 63.683 182.966 L 63.222 170.63 Z"
