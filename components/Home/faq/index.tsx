@@ -67,6 +67,7 @@ const Faq = () => {
       whileInView="animate"
       viewport={{ once: true }}
       className="lg:px-32 md:px-16 px-8 py-10 overflow-hidden"
+      id="faqs"
     >
       <motion.h1
         variants={variants}

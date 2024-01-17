@@ -10,9 +10,9 @@ const page = () => {
   return (
     <div>
       <Hero />
-      <About />
       <Services />
       <Plan />
+      <About />
       <Faq />
       <Business />
       <Contact />
