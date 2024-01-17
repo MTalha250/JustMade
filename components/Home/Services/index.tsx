@@ -98,8 +98,9 @@ const Services = () => {
       </div>
       <div className="relative mt-20">
         <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-10">
-          {services.map((s) => (
+          {services.map((s, index) => (
             <motion.div
+              key={index}
               variants={variants}
               className="bg-[#ffa7ec] hover:bg-primary  transition duration-300 text-secondary p-5 space-y-5 rounded-xl overflow-hidden"
             >
@@ -117,8 +118,13 @@ const Services = () => {
                 href=""
                 className="group w-fit hover:bg-[#f2bd9d] py-1 px-5 rounded-full transition duration-300 items-center space-x-3 font-bold text-xl flex"
               >
-                <span>Get Started</span>{" "}
-                <FaArrowRight className="text-2xl group-hover:animate-bounce-x" />
+                <span>Get Started</span>
+                <span className="w-[25px] overflow-hidden">
+                  <span className="transition-all duration-500 flex w-full -translate-x-full group-hover:translate-x-0">
+                    <FaArrowRight className="text-2xl shrink-0" />
+                    <FaArrowRight className="text-2xl shrink-0" />
+                  </span>
+                </span>
               </Link>
             </motion.div>
           ))}
