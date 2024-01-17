@@ -71,7 +71,10 @@ const About = () => {
         variants={variants}
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 text-secondary mt-10"
       >
-        <motion.div className="w-full text-justify tracking-wider px-0 py-10 sm:p-10 space-y-5">
+        <motion.div
+          variants={variants}
+          className="w-full text-justify tracking-wider px-0 py-10 sm:p-10 space-y-5"
+        >
           <h1 className="text-4xl font-light font-bask text-center">
             Our Mission
           </h1>
@@ -82,7 +85,10 @@ const About = () => {
             ensuring your message shines in the digital realm.
           </p>
         </motion.div>
-        <motion.div className="w-full text-justify tracking-wider border-y-2 md:border-y-0 md:border-x-2 px-0 py-10 sm:p-10 space-y-5">
+        <motion.div
+          variants={variants}
+          className="w-full text-justify tracking-wider border-y-2 md:border-y-0 md:border-x-2 px-0 py-10 sm:p-10 space-y-5"
+        >
           <h1 className="text-4xl font-light font-bask text-center">
             Our Vision
           </h1>
@@ -93,7 +99,10 @@ const About = () => {
             keep your content fresh, relevant, and impactful.
           </p>
         </motion.div>
-        <motion.div className="w-full text-justify tracking-wider px-0 py-10 sm:p-10 space-y-5">
+        <motion.div
+          variants={variants}
+          className="w-full text-justify tracking-wider px-0 py-10 sm:p-10 space-y-5"
+        >
           <h1 className="text-4xl font-light font-bask text-center">
             Our Commitment
           </h1>
