@@ -38,12 +38,15 @@ const Business = () => {
         <motion.h1
           variants={variants}
           className="text-3xl md:text-4xl text-center font-bold bg-transparent"
-          style={{
-            background:
-              "url('https://assets-global.website-files.com/64fed7eecff9e45d4bb373ed/653654b69ea7b7c5f9dbec63_underline.svg') left bottom no-repeat",
-          }}
         >
-          <span>Business Decisions</span>
+          <span
+            style={{
+              background:
+                "url('https://assets-global.website-files.com/64fed7eecff9e45d4bb373ed/653654b69ea7b7c5f9dbec63_underline.svg') left bottom no-repeat",
+            }}
+          >
+            Business Decisions
+          </span>
         </motion.h1>
         <motion.p variants={variants} className="md:w-1/2 py-5 text-center">
           Discover the inspiring success stories of various businesses that have
