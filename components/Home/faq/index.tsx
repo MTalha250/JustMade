@@ -50,10 +50,9 @@ const faqs = [
     img: "https://assets-global.website-files.com/64feee5d05b1a0a2a3bc6f25/65031728db45eb306470eee8_stangel-2022-0602%203.png",
   },
   {
-    question:
-      "Do you offer customized content strategies for different industries?",
+    question: "Can I measure the impact of your SEO services?",
     answer:
-      "Absolutely! We believe in the importance of a tailored content strategy for each industry. Our team conducts in-depth research to understand your industry's specifics, audience needs, and competitive landscape, ensuring a personalized and effective content strategy.",
+      "Absolutely! We provide detailed reports and analytics to track the performance of our SEO strategies, helping you see the tangible impact on your website's traffic and search engine rankings. Our team also provides recommendations for further improvement and growth.",
     img: "https://assets-global.website-files.com/64feee5d05b1a0a2a3bc6f25/65031732a36eda439895da45_stangel-2022-0602%204.png",
   },
 ];
