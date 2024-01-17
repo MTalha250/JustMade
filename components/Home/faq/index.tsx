@@ -136,7 +136,7 @@ const Faq = () => {
           <div className="flex justify-center space-x-3 text-4xl text-white my-5">
             <button className="prev">
               <PiArrowLeftThin
-                className={`p-1 bg-secondary rounded-full ${
+                className={`p-1 bg-secondary hover:bg-[#f2bd9d] hover:text-secondary transition duration-300 rounded-full ${
                   activeIndex == 0 ? "hidden" : ""
                 }`}
               />
@@ -144,7 +144,7 @@ const Faq = () => {
 
             <button className="next">
               <PiArrowRightThin
-                className={`p-1 bg-secondary rounded-full ${
+                className={`p-1 bg-secondary hover:bg-[#f2bd9d] hover:text-secondary transition duration-300 rounded-full ${
                   activeIndex == faqs?.length - 1 ? "hidden" : ""
                 }`}
               />

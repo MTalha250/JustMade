@@ -54,7 +54,7 @@ const About = () => {
           <motion.span variants={variants}>
             <Link
               href=""
-              className="mt-5 group w-fit hover:bg-[#f2bd9d] hover:text-black py-1 px-5 rounded-full transition duration-300 items-center space-x-3 font-bold font-bask bg-secondary text-white flex"
+              className="mt-5 group w-fit hover:bg-[#f2bd9d] hover:text-secondary py-1 px-5 rounded-full transition duration-300 items-center space-x-3 font-bold font-bask bg-secondary text-white flex"
             >
               <span>Join Us</span>
               <span className="w-[25px] overflow-hidden">
