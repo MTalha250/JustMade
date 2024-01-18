@@ -7,6 +7,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Sidebar from "@/components/Navbar/Sidebar";
+
 const Navbar = () => {
   const [activeDropdown, setActiveDropdown] = useState(-1);
   return (
@@ -40,19 +41,24 @@ const Navbar = () => {
               )}
             </Link>
             {link.children && activeDropdown === index && (
-              <div className="text-black absolute top-full left-[-10px] bg-white p-2 border-2 border-primary  w-[250px] rounded shadow-lg">
+              <motion.div
+                initial={{ scale: 0 }}
+                animate={{
+                  scale: 1,
+                  transition: { duration: 0.3, type: "spring" },
+                }}
+                className="text-white absolute top-full left-[-10px] bg-secondary p-5 rounded-2xl w-[250px] shadow-lg"
+              >
                 {link.children.map((child, childIndex) => (
                   <Link
                     key={childIndex}
                     href={child.href}
-                    className={`block p-2 text-sm hover:bg-gray-200 hover:text-primary transition duration-300
-                    ${childIndex === link.children.length - 1 ? "" : "border-b"}
-                    `}
+                    className="rounded block p-2 font-bask text-base hover:bg-[#f2bd9d] hover:text-secondary"
                   >
                     {child.label}
                   </Link>
                 ))}
-              </div>
+              </motion.div>
             )}
           </div>
         ))}
